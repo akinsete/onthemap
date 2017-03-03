@@ -91,7 +91,7 @@ extension ParseClient {
     }
     
     // The objectID parameter is the string value for either "objectId" or "createdAt"
-    func postStudentLocation(uniqueKey: String?, firstName: String?, lastName: String?, mapString: String?, mediaURL: String?, latitude: Int?, longitude: Int?, completionHandlerForPostLocation: @escaping (_ objectID: String?, _ error: NSError?) -> Void) {
+    func postStudentLocation(uniqueKey: String?, firstName: String?, lastName: String?, mapString: String?, mediaURL: String?, latitude: Double?, longitude: Double?, completionHandlerForPostLocation: @escaping (_ objectID: String?, _ error: NSError?) -> Void) {
         
         // JSON request body in String form
         let httpRequestBody = "{\"uniqueKey\": \"\(uniqueKey)\", \"firstName\": \"\(firstName)\", \"lastName\": \"\(lastName)\",\"mapString\": \"\(mapString)\", \"mediaURL\": \"\(mediaURL)\",\"latitude\": \(latitude), \"longitude\": \(longitude)}"
